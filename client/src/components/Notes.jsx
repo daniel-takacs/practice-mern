@@ -20,13 +20,13 @@ function Notes() {
     return (
         <div>
             <h1>Notes</h1>
-            {notes.map(note => {
+            {notes.map(note => 
                 <div>
-                    <p>{note.title}</p>
+                    <h1>{note.title}</h1>
                     <p>{note.content}</p>
                 </div>
                 
-            })}
+            )}
         </div>
     )
 }
