@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 
 function CreateNote() {
 
@@ -19,7 +20,11 @@ function CreateNote() {
     
     const handleClick = (e)=> {
         e.preventDefault()
-        console.log(input)
+        const newNote = {
+           title: input.title,
+           content: input.content 
+        }
+        axios.post('http://localhost:3001/create', newNote)
     }
 
     return (
